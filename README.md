@@ -175,7 +175,7 @@ run "etckeeper init" to update file permissions.)
 	-lp:x:7:cupsys
 	+lp:x:7:
 
-Incidentially, this also means I have a backup of dodo's /etc on kodama.
+Incidentally, this also means I have a backup of dodo's /etc on kodama.
 So if kodama is compromised, that data could be used to attack dodo
 too. On the other hand, if dodo's disk dies, I can restore it from this
 handy hackup.
