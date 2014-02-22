@@ -14,9 +14,6 @@ INSTALL=install
 INSTALL_EXE=${INSTALL} -D
 INSTALL_DATA=${INSTALL} -m 0644 -D
 
-build: etckeeper.spec
-	-./etckeeper-bzr/__init__.py build || echo "** bzr support not built"
-	
 install:
 	mkdir -p $(DESTDIR)$(etcdir)/etckeeper/ $(DESTDIR)$(vardir)/cache/etckeeper/
 	cp -dR *.d $(DESTDIR)$(etcdir)/etckeeper/
@@ -39,7 +36,6 @@ endif
 ifeq ($(HIGHLEVEL_PACKAGE_MANAGER),zypper)
 	$(INSTALL_DATA) zypper-etckeeper.py $(DESTDIR)$(prefix)/lib/zypp/plugins/commit/zypper-etckeeper.py
 endif
-	-./etckeeper-bzr/__init__.py install --root=$(DESTDIR) ${PYTHON_INSTALL_OPTS} || echo "** bzr support not installed"
 	echo "** installation successful"
 
 clean: etckeeper.spec
