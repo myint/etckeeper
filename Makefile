@@ -10,17 +10,16 @@ etcdir=/etc
 mandir=${prefix}/share/man
 vardir=/var
 
-INSTALL=install 
-INSTALL_EXE=${INSTALL} -D
-INSTALL_DATA=${INSTALL} -m 0644 -D
+INSTALL=install
+INSTALL_EXE=${INSTALL}
+INSTALL_DATA=${INSTALL} -m 0644
 
 install:
 	mkdir -p $(DESTDIR)$(etcdir)/etckeeper/ $(DESTDIR)$(vardir)/cache/etckeeper/
-	cp -dR *.d $(DESTDIR)$(etcdir)/etckeeper/
+	cp -pR *.d $(DESTDIR)$(etcdir)/etckeeper/
 	$(INSTALL_DATA) $(CONFFILE) $(DESTDIR)$(etcdir)/etckeeper/etckeeper.conf
 	$(INSTALL_EXE) etckeeper $(DESTDIR)$(bindir)/etckeeper
 	$(INSTALL_DATA) etckeeper.8 $(DESTDIR)$(mandir)/man8/etckeeper.8
-	$(INSTALL_DATA) bash_completion $(DESTDIR)$(etcdir)/bash_completion.d/etckeeper
 ifeq ($(HIGHLEVEL_PACKAGE_MANAGER),apt)
 	$(INSTALL_DATA) apt.conf $(DESTDIR)$(etcdir)/apt/apt.conf.d/05etckeeper
 	mkdir -p $(DESTDIR)$(etcdir)/cruft/filters-unex
