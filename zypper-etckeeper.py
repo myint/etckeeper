@@ -17,6 +17,7 @@ def _call_etckeeper(install_arg):
 
 
 class EtckeeperPlugin(zypp_plugin.Plugin):
+
     def PLUGINBEGIN(self, headers, body):
         _call_etckeeper('pre-install')
         self.ack()
