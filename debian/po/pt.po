@@ -55,4 +55,3 @@ msgstr ""
 "O etckeeper está a ser purgado do sistema, e foi usado para guardar o /etc num "
 "repositório ${VCS}. Se escolher remover o repositório, isto irá DESTRUIR todo "
 "o histórico que o etckeeper guardou de /etc."
-

@@ -54,4 +54,3 @@ msgstr ""
 "Etckeeper afinstalleres fra systemet, og blev brugt til at gemme /etc i et "
 "${VCS}-arkiv. Hvis du v??lger at fjerne arkivet, vil dette ??DEL??GGE al historik "
 "som etckeeper har optaget for /etc."
-

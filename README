@@ -79,9 +79,9 @@ Darcs doesn't support symlinks, so they are also stored in
 A quick walkthrough of using etckeeper.
 
 Note that the default VCS is git, and this tutorial assumes you're using
-it. Using other VCSes should be broadly similar. 
+it. Using other VCSes should be broadly similar.
 
-The `etckeeper init` command initialises an /etc/.git/ repository. 
+The `etckeeper init` command initialises an /etc/.git/ repository.
 If you installed etckeeper from a package, this was probably automatically
 performed during the package installation. If not, your first step is to
 run it by hand:
@@ -116,7 +116,7 @@ daemons and shouldn't be tracked by git. These can be removed from git:
 
 	git rm --cached printcap # modified by CUPS
 	echo printcap >> .gitignore
-	git commit -a -m "don't track printcap" 
+	git commit -a -m "don't track printcap"
 
 etckeeper hooks into apt (and similar systems) so changes to interesting
 files in /etc caused by installing or upgrading packages will automatically
@@ -160,7 +160,7 @@ repository as a git remote. Then you can diff against it, examine its
 history, merge with it, and so on. It would probably not, however, be wise
 to "git checkout" the other machine's branch! (And if you do, make sure to
 run "etckeeper init" to update file permissions.)
-        
+
 	root@kodama:/etc>git remote add dodo ssh://dodo/etc
 	root@kodama:/etc>git fetch dodo
 	root@kodama:/etc>git diff dodo/master group |head
@@ -226,7 +226,7 @@ likely to know.
 [ It's possible that your distribution has chosen to modify etckeeper so
   its default VCS is not git -- if they have please complain to them,
   as they're making things unnecessarily difficult for you, and causing
-  unnecessary divergence of etckeeper installations. 
+  unnecessary divergence of etckeeper installations.
   You should only be using etckeeper with a VCS other than git if you're
   in love with the other VCS. ]
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-		
+
 pl="/var/cache/etckeeper/packagelist"
 
 if etckeeper unclean; then
@@ -17,7 +17,7 @@ if etckeeper unclean; then
 		etckeeper commit "$(printf "$message")"
 	fi
 fi
-	
+
 if [ -e $pl.pre-install ]; then
 	rm -f $pl.pre-install
 fi

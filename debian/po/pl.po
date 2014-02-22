@@ -44,4 +44,3 @@ msgstr "Usunąć repozytorium etckeeper ${VCS} i powiązane pliki?"
 #: ../templates:3001
 msgid "Etckeeper is being purged from the system, and was used to store /etc in a ${VCS} repository. If you choose to remove the repository, this will DESTROY all history etckeeper has recorded for /etc."
 msgstr "Etckeeper jest usuwany z systemu, ale był używany do przechowywania zawartości katalogu /etc w repozytorium ${VCS}. Jeśli wybierzesz usunięcie repozytorium, historia zmian zapisana dla katalogu /etc zostanie BEZPOWROTNIE USUNIĘTA."
-

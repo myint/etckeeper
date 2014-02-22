@@ -1,5 +1,5 @@
 * keep an origin branch with the files debian ships
-  
+
   Not sure quite how to do this yet, it seems it would need to clone
   the repo, switch to origin, and commit, then push back to /etc,
   and either merge origin or commit a second time.

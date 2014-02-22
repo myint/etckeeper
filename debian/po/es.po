@@ -82,4 +82,3 @@ msgstr ""
 "utilizado para almacenar el directorio «/etc» en un repositorio ${VCS}. Si elige "
 "eliminar el repositorio, se DESTRUIRÁ todo el historial que etckeeper ha "
 "guardado para «/etc»."
-
